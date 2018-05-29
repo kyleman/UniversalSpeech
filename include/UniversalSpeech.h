@@ -5,6 +5,8 @@
 #define export __declspec(dllexport) __cdecl
 #include<windows.h> // for wchar_t
 typedef wchar_t ____wchar_t;
+#elif __APPLE__
+
 #else
 #error Platform currently unsupported
 #endif
