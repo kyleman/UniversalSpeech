@@ -1,6 +1,7 @@
 //add header here
 
 #include <stdlib.h>
+#include "../../include/UniversalSpeech.h"
 
 char cmd[1024] = "say -v Alex -r 300 ";
 
