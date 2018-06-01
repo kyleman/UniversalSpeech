@@ -3,16 +3,16 @@
 #include "../private.h"
 #include "../../include/UniversalSpeech.h"
 
-export int sayIsAvailable (void) ;
-export int saySay (const char *, int) ;
-export int sayStop (void) ;
-export int voIsAvailable (void) ;
-export int voSay (const char *, int) ;
-export int voStop (void) ;
+int sayIsAvailable (void) ;
+int saySay (const char *, int) ;
+int sayStop (void) ;
+int voIsAvailable (void) ;
+int voSay (const char *, int) ;
+int voStop (void) ;
 
-const engine engines = {
-    { .name = "Apple Say", .isAvailable = sayIsAvailable, .unload=NULL .say=saySay, .stop=sayStop, .braille=NULL, .setValue=NULL, .getValue=NULL, .setString=NULL, .getString=NULL },
-        { .name = "Apple VoiceOver", .isAvailable = voIsAvailable, .unload=NULL .say=voSay, .stop=voStop, .braille=NULL, .setValue=NULL, .getValue=NULL, .setString=NULL, .getString=NULL }
-}
+const engine engines[] = {
+    { .name = "Apple Say", .isAvailable = sayIsAvailable, .unload= 0, .say=saySay, .stop=sayStop, .braille=0, .setValue=0, .getValue=0, .setString=0, .getString=0 },
+        { .name = "Apple VoiceOver", .isAvailable = voIsAvailable, .unload=0, .say=voSay, .stop=voStop, .braille=0, .setValue=0, .getValue=0, .setString=0, .getString=0 }
+};
 
 const int numEngines = sizeof(engines)/sizeof(engine) -1;
