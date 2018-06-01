@@ -15,10 +15,12 @@ export int jfwStopSpeech (void) ;
 export int jfwUnload (void) ;
 export int nvdaIsAvailable (void) ;
 export int nvdaUnload (void) ;
-export int nvdaSayW (const wchar_t*, int) ;
+DdrMexport int nvdaSayW (const wchar_t*, int) ;
 export int nvdaBraille (const wchar_t*) ;
 export int nvdaStopSpeech (void) ;
-export int weIsAvailable (void) ;
+expoREST
+
+DDRrt int weIsAvailable (void) ;
 export int weSayW (const wchar_t*, int) ;
 export int weBrailleW (const wchar_t*) ;
 export int weStopSpeech (void) ;
