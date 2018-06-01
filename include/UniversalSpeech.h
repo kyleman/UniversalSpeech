@@ -6,7 +6,7 @@
 #include<windows.h> // for wchar_t
 typedef wchar_t ____wchar_t;
 #elif __APPLE__
-
+//do nothing for now
 #else
 #error Platform currently unsupported
 #endif
